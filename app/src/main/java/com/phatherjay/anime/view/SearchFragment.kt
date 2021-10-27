@@ -9,11 +9,11 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import com.phatherjay.anime.databinding.FragmentSettingsBinding
+import com.phatherjay.anime.databinding.FragmentSearchBinding
 import com.phatherjay.anime.viewmodel.AnimeViewModel
 
-class SettingsFragment : Fragment() {
-    private var _binding: FragmentSettingsBinding? = null
+class SearchFragment : Fragment() {
+    private var _binding: FragmentSearchBinding? = null
     private val binding get() = _binding!!
     private val animeVM by activityViewModels<AnimeViewModel>()
 
@@ -21,7 +21,7 @@ class SettingsFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ) = FragmentSettingsBinding.inflate(layoutInflater, container, false).also {
+    ) = FragmentSearchBinding.inflate(layoutInflater, container, false).also {
         _binding = it
     }.root
 
@@ -52,10 +52,10 @@ class SettingsFragment : Fragment() {
         val queryString = binding.actvName.text.toString()
         if (queryString.isNotBlank()) {
             animeVM.fetchCharacter(queryString)
-            SettingsFragmentDirections.actionSettingsFragmentToAnimeListFragment().also {
+            SearchFragmentDirections.actionSettingsFragmentToAnimeListFragment().also {
                 findNavController().navigate(it)
             }
-        } else{
+        } else {
             Toast.makeText(context, " Enter Anime Character Name ", Toast.LENGTH_LONG).show()
         }
     }
