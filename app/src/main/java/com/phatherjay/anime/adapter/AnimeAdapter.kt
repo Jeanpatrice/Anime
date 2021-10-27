@@ -7,12 +7,13 @@ import com.phatherjay.anime.databinding.ItemAnimeBinding
 import com.phatherjay.anime.model.Result
 import com.phatherjay.anime.utils.loadWithGlide
 
-class AnimeAdapter(
-): RecyclerView.Adapter<AnimeAdapter.AnimeViewHolder>() {
+class AnimeAdapter : RecyclerView.Adapter<AnimeAdapter.AnimeViewHolder>() {
 
     private val animeList: MutableList<Result> = mutableListOf()
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int)= AnimeViewHolder.getInstance(parent).also { anime ->
+    override fun onCreateViewHolder(
+        parent: ViewGroup, viewType: Int
+    ) = AnimeViewHolder.getInstance(parent).also { anime ->
         anime.itemView.setOnClickListener { animeList[anime.adapterPosition] }
     }
 
@@ -22,13 +23,14 @@ class AnimeAdapter(
 
     override fun getItemCount() = animeList.size
 
-    fun loadAnime(anime: List<Result>){
+    fun loadAnime(anime: List<Result>) {
+        clear()
         val startPosition = anime.size
         animeList.addAll(anime)
         notifyItemRangeInserted(startPosition, anime.size)
     }
 
-    fun clear() {
+    private fun clear() {
         val listSize = animeList.size
         animeList.clear()
         notifyItemRangeRemoved(0, listSize)
@@ -38,7 +40,7 @@ class AnimeAdapter(
         private val binding: ItemAnimeBinding
     ) : RecyclerView.ViewHolder(binding.root) {
         fun loadCharacter(anime: Result) = with(binding) {
-            val img =  anime.imageUrl
+            val img = anime.imageUrl
             tvName.text = anime.title
             ivAnimeImage.loadWithGlide(img)
         }

@@ -53,7 +53,6 @@ class AnimeListFragment : Fragment() {
     }
 
     private fun loadAnimes(anime: AnimeData) {
-        animeAdapter.clear()
         anime.results?.let { animeAdapter.loadAnime(it) }
     }
 

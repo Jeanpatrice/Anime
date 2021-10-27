@@ -1,6 +1,5 @@
 package com.phatherjay.anime.viewmodel
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -11,7 +10,7 @@ import com.phatherjay.anime.utils.ApiState
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class AnimeViewModel: ViewModel() {
+class AnimeViewModel : ViewModel() {
     private val _animeState = MutableLiveData<ApiState<AnimeData>>(ApiState.Loading)
     val animeState: LiveData<ApiState<AnimeData>>
         get() = _animeState
@@ -21,7 +20,7 @@ class AnimeViewModel: ViewModel() {
             AnimeRepo.fetchAnime(query).let { response ->
                 val state = if (response.isSuccessful || response.body() != null) {
                     ApiState.Success(response.body()!!)
-                }else ApiState.Failure("Anime body is null")
+                } else ApiState.Failure("Anime body is null")
                 _animeState.postValue(state)
             }
         }

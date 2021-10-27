@@ -1,7 +1,7 @@
 package com.phatherjay.anime.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.phatherjay.anime.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

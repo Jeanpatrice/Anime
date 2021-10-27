@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.phatherjay.anime.view.SettingsFragment"
+        android:name="com.phatherjay.anime.view.SearchFragment"
         android:label="fragment_settings"
-        tools:layout="@layout/fragment_settings" >
+        tools:layout="@layout/fragment_search">
         <action
             android:id="@+id/action_settingsFragment_to_animeListFragment"
             app:destination="@id/animeListFragment" />
