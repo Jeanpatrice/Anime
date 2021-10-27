@@ -1,4 +1,4 @@
-package com.phatherjay.anime
+package com.phatherjay.anime.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

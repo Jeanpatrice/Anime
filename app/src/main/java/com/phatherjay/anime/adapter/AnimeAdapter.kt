@@ -8,13 +8,12 @@ import com.phatherjay.anime.model.Result
 import com.phatherjay.anime.utils.loadWithGlide
 
 class AnimeAdapter(
-    private val animeListener: (Result) -> Unit
 ): RecyclerView.Adapter<AnimeAdapter.AnimeViewHolder>() {
 
     private val animeList: MutableList<Result> = mutableListOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int)= AnimeViewHolder.getInstance(parent).also { anime ->
-        anime.itemView.setOnClickListener { animeListener(animeList[anime.adapterPosition]) }
+        anime.itemView.setOnClickListener { animeList[anime.adapterPosition] }
     }
 
     override fun onBindViewHolder(holder: AnimeViewHolder, position: Int) {
