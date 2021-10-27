@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navi_graph"
+    app:startDestination="@id/settingsFragment">
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.phatherjay.anime.view.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_animeListFragment"
+            app:destination="@id/animeListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/animeListFragment"
+        android:name="com.phatherjay.anime.view.AnimeListFragment"
+        android:label="fragment_anime_list"
+        tools:layout="@layout/fragment_anime_list" />
+</navigation>

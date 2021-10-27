@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ic_arrow_back.xml" value="0.30364583333333334" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.23645833333333333" />
+        <entry key="app/src/main/res/layout/fragment_anime_list.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.2677083333333333" />
+        <entry key="app/src/main/res/layout/item_anime.xml" value="0.2833333333333333" />
       </map>
     </option>
   </component>
