@@ -14,7 +14,7 @@ import com.phatherjay.anime.model.AnimeData
 import com.phatherjay.anime.utils.ApiState
 import com.phatherjay.anime.viewmodel.AnimeViewModel
 
-class AnimeListFragment : Fragment() {
+open class AnimeListFragment : Fragment() {
 
     private var _binding: FragmentAnimeListBinding? = null
     private val binding get() = _binding!!
