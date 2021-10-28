@@ -56,7 +56,7 @@ class SearchFragment : Fragment() {
                 findNavController().navigate(it)
             }
         } else {
-            Toast.makeText(context, " Enter Anime Character Name ", Toast.LENGTH_LONG).show()
+            Toast.makeText(context, " Enter Anime Title Name ", Toast.LENGTH_LONG).show()
         }
     }
 }

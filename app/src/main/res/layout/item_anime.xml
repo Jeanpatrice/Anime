@@ -18,7 +18,7 @@
         android:textSize="18sp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-        android:contentDescription="@string/character_name"
+        android:contentDescription="@string/title_name"
         android:layout_gravity="bottom|center"/>
 
 </androidx.cardview.widget.CardView>
